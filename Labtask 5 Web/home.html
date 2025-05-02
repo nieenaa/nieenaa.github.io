@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JTMK - Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .header {
+      color: #2d8be6;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 20px 0px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .header .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .header .logo img {
+      height: 65px;
+      margin-right: 10px;
+    }
+
+    .header .nav a {
+      margin-left: 30px;
+      padding: 0 10px;
+      text-decoration: none;
+      color: black;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .header .nav a:hover {
+      color: #2d8be6;
+    }
+
+    .main-content {
+      background-color: #2d8be6;
+      color: white;
+      text-align: center;
+      padding: 180px 20px 100px;
+      min-height: 55vh;
+    }
+
+    .main-content h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .main-content p {
+      font-size: 16px;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      background-color: white;
+      color: black;
+      padding: 12px 30px;
+      font-weight: bold;
+      font-size: 14px;
+      text-decoration: none;
+      border-radius: 4px;
+      display: inline-block;
+      margin: 10px;
+    }
+
+    .btn:hover {
+      background-color: #f0f0f0;
+    }
+
+    .social-sidebar {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      z-index: 1000;
+    }
+
+    .social-sidebar a {
+      padding: 12px;
+      color: #2d8be6;
+      background: #fff;
+      border: 1px solid #ccc;
+      text-align: center;
+      transition: background 0.3s;
+    }
+
+    .social-sidebar a:hover {
+      background: #f0f0f0;
+    }
+
+    .footer-content {
+      background-color: #e3d9d9;
+      color: black;
+      text-align: center;
+      padding: 1px 0;
+      font-size: 16px;            
+    }
+
+    .dialog-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+
+    .dialog-box {
+      background: white;
+      color: black;
+      padding: 30px;
+      max-width: 500px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .dialog-box p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .close-btn {
+      margin-top: 20px;
+      background-color: #2d8be6;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .close-btn:hover {
+      background-color: #176bbd;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+      }
+
+      .header .nav {
+        margin-top: 10px;
+      }
+
+      .header .nav a {
+        margin-left: 0;
+        margin-right: 15px;
+      }
+
+      .main-content h1 {
+        font-size: 28px;
+      }
+
+      .main-content {
+        padding: 160px 20px 80px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Social Media Sidebar -->
+  <div class="social-sidebar">
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+  </div>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROyv4Nw0BIjqcgF-J1VsyBbg3NfMots20uQQ&s"
+        alt="Logo" />
+      <h1 style="font-size:16px;margin:0;">JABATAN TEKNOLOGI MAKLUMAT & KOMUNIKASI</h1>
+    </div>
+    <div class="nav">
+      <a href="home.html" data-ajax="false">HOME</a>
+      <a href="about.html" data-ajax="false">ABOUT</a>
+      <a href="project.html" data-ajax="false">PROJECTS</a>
+      <a href="contact.html" data-ajax="false">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>HEY, MY NAME IS JTMK</h1>
+    <p>
+      JTMK is the Department of Information and Communication Technology (JTMK)
+      offering DDT courses (Diploma in Information Technology (Digital Technology))
+      at Seberang Perai Polytechnic (PSP).
+    </p>
+    <a href="#" class="btn" onclick="openDialog()">ABOUT JTMK</a>
+    <a href="project.html" class="btn">PROJECTS</a>
+  </div>
+
+  <!-- Dialog Box -->
+  <div class="dialog-overlay" id="dialog">
+    <div class="dialog-box">
+      <h2>About JTMK</h2>
+      <p>JTMK stands for Jabatan Teknologi Maklumat & Komunikasi, providing innovative digital technology education at PSP.</p>
+      <button class="close-btn" onclick="closeDialog()">Close</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer-content">
+    <h4>Copyright © DDT4x S2 2024/2025. All rights reserved.</h4>
+  </div>
+
+  <!-- Dialog Script -->
+  <script>
+    function openDialog() {
+      document.getElementById('dialog').style.display = 'flex';
+    }
+
+    function closeDialog() {
+      document.getElementById('dialog').style.display = 'none';
+    }
+  </script>
+
+</body>
+
+</html>

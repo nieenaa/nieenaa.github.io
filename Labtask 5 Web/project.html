@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JTMK Projects</title>
+
+    <!-- ✅ Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <!-- jQuery Mobile & Fonts -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            color: #2d8be6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 20px 0px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .logo img {
+            height: 65px;
+            margin-right: 10px;
+        }
+
+        .header .nav a {
+            margin-left: 30px;
+            padding: 0 10px;
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .header .nav a:hover {
+            color: #2d8be6;
+        }
+
+
+        .main-content {
+            padding-top: 120px;
+            padding-bottom: 60px;
+            text-align: center;
+        }
+
+        .main-content h2 {
+            margin-bottom: 20px;
+            font-size: 32px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .main-content p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .project-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .project-item {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .project-item:hover {
+            transform: scale(1.05);
+        }
+
+        .project-item img {
+            width: 80px;
+            height: 70px;
+            object-fit: cover;
+            border-bottom: 2px solid #ddd;
+            margin-top: 10px;
+        }
+
+        .project-item h3 {
+            font-size: 22px;
+            margin: 10px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .project-item p {
+            font-size: 15px;
+            color: #555;
+            padding: 0 15px;
+        }
+
+        .project-item .view-report {
+            display: inline-block;
+            margin: 15px;
+            padding: 10px 20px;
+            background-color: #007aff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .project-item .view-report:hover {
+            background-color: #005bb5;
+        }
+
+        footer,
+        .ui-footer h4 {
+            font-size: 16px;
+            font-weight: 300px;
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* ✅ Social Media Sidebar */
+        .social-sidebar {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            z-index: 999;
+        }
+
+        .social-sidebar a {
+            padding: 12px;
+            color: #2d8be6;
+            background: #fff;
+            border: 1px solid #ccc;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        .social-sidebar a:hover {
+            background: #f0f0f0;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px;
+            }
+
+            .header .nav {
+                margin-top: 10px;
+            }
+
+            .header .nav a {
+                margin-left: 0;
+                margin-right: 15px;
+            }
+
+            .main-content h1 {
+                font-size: 28px;
+            }
+
+            .main-content {
+                padding: 160px 20px 80px;
+            }
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+    <!-- ✅ Social Sidebar -->
+    <div class="social-sidebar">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROyv4Nw0BIjqcgF-J1VsyBbg3NfMots20uQQ&s"
+                alt="Logo" />
+            <h1 style="font-size:16px;margin:0;">JABATAN TEKNOLOGI MAKLUMAT & KOMUNIKASI</h1>
+        </div>
+        <div class="nav">
+            <a href="home.html" data-ajax="false">HOME</a>
+            <a href="about.html" data-ajax="false">ABOUT</a>
+            <a href="project.html" data-ajax="false">PROJECTS</a>
+            <a href="contact.html" data-ajax="false">CONTACT</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2>Our Upcoming Projects</h2>
+        <p>Explore the innovative projects we have developed to improve systems and create impactful solutions.</p>
+
+        <div class="project-container">
+            <!-- Project 1 -->
+            <div class="project-item">
+                <a href="example" target="_blank">
+                    <img src="https://www.shutterstock.com/image-vector/hand-touch-fingerprint-bio-metric-260nw-1803151870.jpg"
+                        alt="Smart Attendance System">
+                </a>
+                <div class="project-info">
+                    <h3>Smart Attendance System</h3>
+                    <p>A smart solution to track attendance using QR codes and facial recognition technology.</p>
+                    <a href="javascript:void(0)" onclick="showSuccessMessage()" class="view-report">View Report
+                        (PDF)</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj001nlmt02hpn9v0UhhNsXSvF9sVtOONMhw&s"
+                    alt="Volunteer Management System">
+                <div class="project-info">
+                    <h3>Volunteer Management System</h3>
+                    <p>A comprehensive system to manage volunteer data, track attendance, and generate reports.</p>
+                    <a href="javascript:void(0)" onclick="showSuccessMessage()" class="view-report">View Report
+                        (PDF)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div data-role="footer" data-position="fixed">
+        <h4>Copyright © DDT4x S2 2024/2025. All rights reserved.</h4>
+    </div>
+
+    <script>
+        // Function to show success message when "View Report" is clicked
+        function showSuccessMessage() {
+            Swal.fire({
+                title: "Good job!",
+                text: "You have viewed the report!",
+                icon: "success"
+            });
+        }
+    </script>
+
+</body>
+
+</html>
